@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexTalk - Premium Voice to Text</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="glass-container">
+        <header>
+            <h1><i class="fa-solid fa-microphone-lines"></i> NexTalk</h1>
+            <p>Convert your voice into text effortlessly</p>
+        </header>
+
+        <div class="controls-section">
+            <div class="language-selector">
+                <i class="fa-solid fa-globe"></i>
+                <select id="languageSelect">
+                    <option value="en-US">English (US)</option>
+                    <option value="en-GB">English (UK)</option>
+                    <option value="es-ES">Spanish</option>
+                    <option value="fr-FR">French</option>
+                    <option value="hi-IN">Hindi</option>
+                    <option value="gu-IN">Gujarati</option>
+                </select>
+            </div>
+            
+            <div class="recording-indicator" id="recordingIndicator">
+                <div class="pulse-ring"></div>
+                <span id="statusText">Ready to record</span>
+            </div>
+        </div>
+
+        <div class="text-area-wrapper">
+            <textarea id="transcriptArea" placeholder="Your text will appear here..." readonly></textarea>
+        </div>
+
+        <div class="actions">
+            <div class="main-actions">
+                <button id="startBtn" class="btn btn-primary" title="Start Recording"><i class="fa-solid fa-play"></i> Start</button>
+                <button id="stopBtn" class="btn btn-danger" title="Stop Recording" disabled><i class="fa-solid fa-stop"></i> Stop</button>
+            </div>
+            <div class="secondary-actions">
+                <button id="clearBtn" class="btn btn-outline" title="Clear Text"><i class="fa-solid fa-eraser"></i></button>
+                <button id="copyBtn" class="btn btn-outline" title="Copy to Clipboard"><i class="fa-solid fa-copy"></i></button>
+                <button id="downloadBtn" class="btn btn-outline" title="Download Text File"><i class="fa-solid fa-download"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
